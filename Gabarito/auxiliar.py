@@ -1,0 +1,46 @@
+# entrar no sistema da empresa
+# https://dlp.hashtagtreinamentos.com/python/intensivao/login
+
+import pyautogui
+import time
+
+
+# pausa a cada comando 1s
+pyautogui.PAUSE = 1
+# aperta a tecla windows
+pyautogui.press("win")
+# digite o nome do programa
+pyautogui.write("chrome")
+# aperta enter
+pyautogui.press("enter")
+# digitar o link
+link = "https://dlp.hashtagtreinamentos.com/python/intensivao/login"
+pyautogui.write(link)
+# aperta enter 
+pyautogui.press("enter")
+
+# esperar 5 segundos
+time.sleep(5)
+# fazer login
+pyautogui.click(x=496, y=374)
+# digitar e-mail
+pyautogui.write("automacao@gmail.com")
+# passar para o campo de senha
+pyautogui.press("tab")
+# digitar senha 123456
+pyautogui.write("123456")
+# clicar em enter
+pyautogui.click(x=682, y=521) 
+
+import pandas as pd
+tabela = pd.read_csv('gabarito\produtos.csv')
+#print(tabela)
+
+for linha in tabela.index:  
+
+    #cadastrar produtos 
+    pyautogui.click(x=676, y=488) 
+    #codigo 
+    pyautogui.press("tab") 
+    pyautogui.write (str(123456))
+    pyautogui.press("tab")
